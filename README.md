@@ -8,7 +8,6 @@
   ⚠️WIP⚠️ An open-source, lightweight CSS framework for building responsive websites. Contributions welcome!
   <br>
   <br>
-  <a href="https://github.com/WitnessDevs/icons">Vector Icons</a>
 
 ### Table of Contents
 - [Features](#features)
