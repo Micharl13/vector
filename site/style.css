@@ -157,3 +157,15 @@ footer {
   background: #333;
   color: #fff;
 }
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+}
