@@ -5,7 +5,7 @@
 <h1 align="center">Vector</h1>
 
 <p align="center">
-  ⚠️WIP⚠️ An open-source, lightweight CSS framework for building responsive websites. Contributions welcome!
+  ⚠️WORK IN PROGRESS⚠️ An open-source, lightweight CSS framework for building responsive websites. Contributions welcome!
   <br>
   <br>
 
