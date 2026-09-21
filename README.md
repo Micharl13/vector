@@ -26,34 +26,34 @@
 ## Status
 
 <!-- Repo Metrics -->
-<a href="https://github.com/WitnessDevs/Vector/stargazers">
-  <img src="https://img.shields.io/github/stars/WitnessDevs/Vector?style=flat-square" alt="GitHub stars">
+<a href="https://github.com/Micharl13/Vector/stargazers">
+  <img src="https://img.shields.io/github/stars/Micharl13/Vector?style=flat-square" alt="GitHub stars">
 </a>
-<a href="https://github.com/WitnessDevs/Vector/network/members">
-  <img src="https://img.shields.io/github/forks/WitnessDevs/Vector?style=flat-square" alt="GitHub forks">
+<a href="https://github.com/Micharl13/Vector/network/members">
+  <img src="https://img.shields.io/github/forks/Micharl13/Vector?style=flat-square" alt="GitHub forks">
 </a>
-<a href="https://github.com/WitnessDevs/Vector/issues">
-  <img src="https://img.shields.io/github/issues/WitnessDevs/Vector?style=flat-square" alt="Open issues">
+<a href="https://github.com/Micharl13/Vector/issues">
+  <img src="https://img.shields.io/github/issues/Micharl13/Vector?style=flat-square" alt="Open issues">
 </a>
 
 <!-- Release / Version -->
-<a href="https://github.com/WitnessDevs/Vector/releases">
-  <img src="https://img.shields.io/github/v/release/WitnessDevs/Vector?style=flat-square" alt="Latest release">
+<a href="https://github.com/Micharl13/Vector/releases">
+  <img src="https://img.shields.io/github/v/release/Micharl13/Vector?style=flat-square" alt="Latest release">
 </a>
-<img src="https://img.shields.io/github/license/WitnessDevs/Vector?style=flat-square" alt="License">
+<img src="https://img.shields.io/github/license/Micharl13/Vector?style=flat-square" alt="License">
 
 <!-- CI / Build -->
-<a href="https://github.com/WitnessDevs/Vector/actions">
-  <img src="https://img.shields.io/github/actions/workflow/status/WitnessDevs/Vector/.github/workflows/scss-compile.yml?style=flat-square" alt="Build status">
+<a href="https://github.com/Micharl13/Vector/actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/Micharl13/Vector/.github/workflows/scss-compile.yml?style=flat-square" alt="Build status">
 </a>
-<img src="https://img.shields.io/github/last-commit/WitnessDevs/Vector?style=flat-square" alt="Last commit">
+<img src="https://img.shields.io/github/last-commit/Micharl13/Vector?style=flat-square" alt="Last commit">
 
 <!-- Language / Platform -->
-<img src="https://img.shields.io/github/languages/top/WitnessDevs/Vector?style=flat-square" alt="Top language">
+<img src="https://img.shields.io/github/languages/top/Micharl13/Vector?style=flat-square" alt="Top language">
 
 <!-- Contributors -->
-<a href="https://github.com/WitnessDevs/Vector/graphs/contributors">
-  <img src="https://img.shields.io/github/contributors/WitnessDevs/Vector?style=flat-square" alt="Contributors">
+<a href="https://github.com/Micharl13/Vector/graphs/contributors">
+  <img src="https://img.shields.io/github/contributors/Micharl13/Vector?style=flat-square" alt="Contributors">
 </a>
 
 <!-- npm (placeholder, update name later) -->
@@ -62,10 +62,10 @@
 </a>
 
 <!-- Usage -->
-<a href="https://cdn.jsdelivr.net/gh/WitnessDevs/Vector@vDev/dist/vector.css">
+<a href="https://cdn.jsdelivr.net/gh/Micharl13/Vector@vDev/dist/vector.css">
   <img src="https://img.shields.io/badge/CDN-ready-brightgreen?style=flat-square" alt="CDN ready">
 </a>
-<a href="https://WitnessDevs.github.io/Vector/">
+<a href="https://Micharl13.github.io/Vector/">
   <img src="https://img.shields.io/badge/Live-Demo-blue?style=flat-square" alt="Live demo">
 </a>
 
@@ -77,12 +77,12 @@ You can get Vector in a couple of ways:
 
 ### Link to the jsDelivr CDN
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WitnessDevs/Vector@main/dist/css/vector.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Micharl13/Vector@main/dist/css/vector.css">
 ```
 ### Download
 
-- [Download Source (ZIP)](https://github.com/WitnessDevs/vector/archive/refs/heads/main.zip)
-- [Download Latest Release (COMING IN THE NEAR FUTURE)](https://github.com/WitnessDevs/vector/releases)
+- [Download Source (ZIP)](https://github.com/Micharl13/vector/archive/refs/heads/main.zip)
+- [Download Latest Release (COMING IN THE NEAR FUTURE)](https://github.com/Micharl13/vector/releases)
 
 ## Contributing
 
