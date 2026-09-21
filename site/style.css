@@ -17,38 +17,6 @@ a {
   color: inherit;
 }
 
-/* ---- Buttons ---- */
-.btn-primary {
-  background: #61dafb;
-  color: #fff;
-  padding: 0.8rem 1.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.btn-secondary {
-  background: #333;
-  color: #fff;
-  padding: 0.8rem 1.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  display: inline-block;
-  margin-left: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 /* ---- Hero Section ---- */
 .hero {
   position: relative;
