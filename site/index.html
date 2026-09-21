@@ -27,9 +27,10 @@
       <div class="container hero-content">
         <h1>Vector</h1>
         <p>⚠️WORK IN PROGRESS⚠️ A lightweight CSS framework for building responsive websites.</p>
-        <button onclick="copyText()" title="Copy">
-          <i id="copy-icon" data-lucide="clipboard"></i>
-        </button>
+        <div class="copy-box">
+          <code id="text-to-copy">link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WitnessDevs/Vector@v0.1.0/dist/css/vector.css</code>
+          <button onclick="copyText()">Copy</button>
+        </div>
 
       </div>
     </header>
@@ -37,21 +38,6 @@
     <footer>
       <p>Vector &copy; 2025-2026 Micharl13. Vector is available for use and modification under the <a href="https://github.com/WitnessDevs/Vector/blob/main/LICENSE">MIT License</a>.</p>
     </footer>
-        <script>
-          function copyText() {
-          const text = document.getElementById("text-to-copy").textContent;
-
-          navigator.clipboard.writeText(link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WitnessDevs/Vector@v0.1.0/dist/css/vector.css);
-
-          const icon = document.getElementById("copy-icon");
-          icon.setAttribute("data-lucide", "check");
-          lucide.createIcons();
-
-          setTimeout(() => {
-          icon.setAttribute("data-lucide", "clipboard");
-          lucide.createIcons();
-          }, 1500);
-          }
-        </script>
+     
   </body>
 </html>
