@@ -1,35 +1,135 @@
 /* ---- Reset + Base ---- */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+/* ---- Theme Variables ---- */
+
+:root {
+    /* Main colors */
+    --background: #f7f7f7;
+    --text: #333333;
+
+    /* Navbar */
+    --navbar-background: #ffffff;
+    --navbar-border: #dee2e6;
+    --navbar-text: #212529;
+
+    /* Links */
+    --link-color: #0d6efd;
+    --link-hover: #0a58ca;
+
+    /* Theme dropdown */
+    --dropdown-background: #ffffff;
+    --dropdown-hover: #f1f3f5;
+
+    /* Hero */
+    --hero-start: #ffffff;
+    --hero-middle: #f4f9ff;
+    --hero-end: #dceeff;
+
+    /* Footer */
+    --footer-background: #333333;
+    --footer-text: #ffffff;
+}
+
+
+/* ---- Dark Theme ---- */
+
+[data-theme="dark"] {
+    --background: #121212;
+    --text: #eeeeee;
+
+    --navbar-background: #1e1e1e;
+    --navbar-border: #343434;
+    --navbar-text: #eeeeee;
+
+    --link-color: #6ea8fe;
+    --link-hover: #9ec5fe;
+
+    --dropdown-background: #1e1e1e;
+    --dropdown-hover: #2b2b2b;
+
+    --hero-start: #121212;
+    --hero-middle: #17202b;
+    --hero-end: #1d3045;
+
+    --footer-background: #1e1e1e;
+    --footer-text: #eeeeee;
+}
+
+
+/* ---- Auto Theme ---- */
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --background: #121212;
+        --text: #eeeeee;
+
+        --navbar-background: #1e1e1e;
+        --navbar-border: #343434;
+        --navbar-text: #eeeeee;
+
+        --link-color: #6ea8fe;
+        --link-hover: #9ec5fe;
+
+        --dropdown-background: #1e1e1e;
+        --dropdown-hover: #2b2b2b;
+
+        --hero-start: #121212;
+        --hero-middle: #17202b;
+        --hero-end: #1d3045;
+
+        --footer-background: #1e1e1e;
+        --footer-text: #eeeeee;
+    }
+}
+
+
+/* ---- Base ---- */
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: #333;
-  background: #f7f7f7;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
+
+/* ---- Links ---- */
+
 footer a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 footer a:hover {
-  text-decoration: underline;
-  color: #0d6efd;
+    text-decoration: underline;
+    color: var(--link-color);
 }
+
 
 /* ---- Navigation bar ---- */
 
 .navbar {
     width: 100%;
-    background: white;
-    border-bottom: 1px solid #dee2e6;
+    background: var(--navbar-background);
+    border-bottom: 1px solid var(--navbar-border);
+
     position: relative;
     z-index: 1000;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .navbar-container {
@@ -42,6 +142,7 @@ footer a:hover {
     align-items: center;
     justify-content: space-between;
 }
+
 
 /* LEFT */
 
@@ -63,13 +164,16 @@ footer a:hover {
 }
 
 .navbar-links a {
-    color: #212529;
+    color: var(--navbar-text);
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
-    color: #0d6efd;
+    color: var(--link-color);
 }
+
 
 /* RIGHT */
 
@@ -80,15 +184,18 @@ footer a:hover {
 }
 
 .navbar-right > a {
-    color: #212529;
+    color: var(--navbar-text);
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .navbar-right > a:hover {
-    color: #0d6efd;
+    color: var(--link-color);
 }
 
-/* THEME DROPDOWN */
+
+/* ---- Theme Dropdown ---- */
 
 .theme-dropdown {
     position: relative;
@@ -100,12 +207,19 @@ footer a:hover {
     gap: 6px;
 
     padding: 8px 10px;
-    border: 1px solid #dee2e6;
+
+    border: 1px solid var(--navbar-border);
     border-radius: 6px;
 
-    background: white;
-    color: #212529;
+    background: var(--dropdown-background);
+    color: var(--navbar-text);
+
     cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .theme-menu {
@@ -113,13 +227,17 @@ footer a:hover {
 
     position: absolute;
     z-index: 1001;
+
     right: 0;
     top: calc(100% + 6px);
+
     min-width: 130px;
     padding: 6px;
-    background: white;
-    border: 1px solid #dee2e6;
+
+    background: var(--dropdown-background);
+    border: 1px solid var(--navbar-border);
     border-radius: 8px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -129,56 +247,84 @@ footer a:hover {
 
 .theme-menu a {
     display: block;
+
     padding: 8px 10px;
 
-    color: #212529;
+    color: var(--navbar-text);
     text-decoration: none;
+
     border-radius: 5px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .theme-menu a:hover {
-    background: #f1f3f5;
+    background: var(--dropdown-hover);
+    color: var(--link-color);
 }
 
+
 /* ---- Hero Section ---- */
+
 .hero {
-  position: relative;
-  text-align: center;
-  padding: 8rem 2rem 6rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 50%, #dceeff 100%);
-}
-  overflow: hidden;
+    position: relative;
+
+    text-align: center;
+
+    padding: 8rem 2rem 6rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--hero-start) 0%,
+        var(--hero-middle) 50%,
+        var(--hero-end) 100%
+    );
+
+    overflow: hidden;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .logo {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem;
+    width: 250px;
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 1.5rem;
 }
 
+
 /* ---- Footer ---- */
+
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: #333;
-  color: #fff;
+    text-align: center;
+
+    padding: 2rem;
+
+    background: var(--footer-background);
+    color: var(--footer-text);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
+
 
 /* ================================
    Code Blocks
@@ -187,12 +333,17 @@ footer {
 .code-block {
     width: 100%;
     max-width: 600px;
+
     margin: 20px auto;
+
     border: 1px solid #30363d;
     border-radius: 8px;
+
     overflow: hidden;
+
     background: #272822;
 }
+
 
 /* Header */
 
@@ -207,14 +358,17 @@ footer {
     border-bottom: 1px solid #303030;
 }
 
+
 /* Language */
 
 .code-language {
     font-family: Arial, sans-serif;
     font-size: 12px;
     font-weight: 500;
+
     color: #a9b7c6;
 }
+
 
 /* Copy button */
 
@@ -248,6 +402,7 @@ footer {
     background: #3a3b37;
 }
 
+
 /* Code area */
 
 .code-block pre {
@@ -270,6 +425,7 @@ footer {
     font-size: 14px;
     line-height: 1.6;
 }
+
 
 /* Scrollbar */
 
