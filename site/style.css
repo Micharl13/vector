@@ -27,7 +27,8 @@ body {
   position: relative;
   text-align: center;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f5faff 50%, #eaf4ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 50%, #dceeff 100%);
+}
   overflow: hidden;
 }
 
