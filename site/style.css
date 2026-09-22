@@ -158,36 +158,110 @@ footer {
   color: #fff;
 }
 
-.code-box {
-  position: relative;
-  background: #1e1e1e;
-  border-radius: 6px;
-  padding: 16px;
-  overflow-x: auto;
+/* ================================
+   Code Blocks
+   ================================ */
+
+.code-block {
+    margin: 20px 0;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #272822;
 }
 
-.code-box pre {
-  margin: 0;
+/* Header */
+
+.code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 12px;
+
+    background: #1e1f1c;
+    border-bottom: 1px solid #303030;
 }
 
-.code-box code {
-  font-family: monospace;
-  color: #d4d4d4;
-  font-size: 14px;
+/* Language */
+
+.code-language {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #a9b7c6;
 }
+
+/* Copy button */
 
 .copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 5px 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background: #2d2d2d;
-  color: white;
-  cursor: pointer;
+    padding: 5px 10px;
+
+    border: 1px solid #555;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #c5c8c6;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
 }
 
 .copy-button:hover {
-  background: #3a3a3a;
+    background: #30312e;
+    border-color: #777;
+    color: #ffffff;
+}
+
+.copy-button:active {
+    background: #3a3b37;
+}
+
+/* Code area */
+
+.code-block pre {
+    margin: 0 !important;
+    padding: 16px !important;
+
+    overflow-x: auto;
+
+    background: transparent !important;
+}
+
+.code-block code {
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+
+.code-block pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+    background: #1e1f1c;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover {
+    background: #777;
 }
