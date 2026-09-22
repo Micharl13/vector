@@ -12,12 +12,12 @@ body {
   line-height: 1.6;
 }
 
-a {
+.footer-link a {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover {
+.footer-link a:hover {
   text-decoration: underline
   color: #0000EE;
 }
