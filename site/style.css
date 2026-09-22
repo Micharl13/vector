@@ -12,6 +12,10 @@ body {
   line-height: 1.6;
 }
 
+a {
+  text-color: inherit;
+}
+
 /* ---- Hero Section ---- */
 .hero {
   position: relative;
