@@ -1,12 +1,18 @@
-function copyCode() {
-  const code = document.getElementById("code-to-copy").textContent;
+function copyCode(button) {
+    const codeBlock = button.closest(".code-block");
+    const code = codeBlock.querySelector("code").textContent;
 
-  navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(code).then(() => {
+        button.textContent = "Copied!";
 
-  const button = document.querySelector(".copy-button");
-  button.textContent = "Copied!";
+        setTimeout(() => {
+            button.textContent = "Copy";
+        }, 1500);
+    }).catch(() => {
+        button.textContent = "Failed";
 
-  setTimeout(() => {
-    button.textContent = "Copy";
-  }, 1500);
+        setTimeout(() => {
+            button.textContent = "Copy";
+        }, 1500);
+    });
 }
