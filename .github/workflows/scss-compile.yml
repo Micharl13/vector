@@ -2,22 +2,13 @@ name: Compile SCSS
 
 on:
   push:
-    paths-ignore:
-      - "README.md"
-      - "SECURITY.md"
-      - "CONTRIBUTING.md"
-      - "CODE_OF_CONDUCT.md"
-      - "LICENSE"
-      - "docs/**"
-      - "assets/**"
     branches:
-      - vDev
-  pull_request:
-    branches:
-      - vDev
+      - main
+    paths:
+      - "scss/**"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -27,26 +18,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          persist-credentials: false  # Allows PAT for push
+          persist-credentials: false
 
       - name: Use Node.js 20
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install Sass
         run: npm install -g sass
 
-      - name: Compile SCSS (with partial support)
+      - name: Compile SCSS
         run: |
-          mkdir -p dist/css
+          mkdir -p distribution/css
 
-          # Compile only SCSS files that are NOT partials (no leading "_")
+          # Compile only SCSS files that are NOT partials
           for f in scss/*.scss; do
             filename=$(basename "$f")
+
             if [[ "$filename" != _* ]]; then
               name="${filename%.scss}"
-              sass "$f" "dist/css/$name.css" --no-source-map
+              sass "$f" "distribution/css/$name.css" --no-source-map
             fi
           done
 
@@ -55,10 +47,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add dist/css/*.css
+          git add distribution/css/*.css
+
           git commit -m "Auto-compile SCSS" || echo "No changes to commit"
 
-          # Safely pull latest vDev before pushing
-          git pull https://x-access-token:${{ secrets.GH_PAT }}@github.com/Micharl13/Vector-front-end-framework.git vDev --rebase
+          git pull https://x-access-token:${{ secrets.GH_PAT }}@github.com/Micharl13/Vector-front-end-framework.git main --rebase
 
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Micharl13/Vector-front-end-framework.git HEAD:vDev
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Micharl13/Vector-front-end-framework.git HEAD:main
