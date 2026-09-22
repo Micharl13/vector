@@ -12,12 +12,12 @@ body {
   line-height: 1.6;
 }
 
-.footer-link a {
+.footer-link {
   text-decoration: none;
   color: inherit;
 }
 
-.footer-link a:hover {
+.footer-link:hover {
   text-decoration: underline
   color: #0000EE;
 }
@@ -28,6 +28,8 @@ body {
     width: 100%;
     background: white;
     border-bottom: 1px solid #dee2e6;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-container {
@@ -110,16 +112,14 @@ body {
     display: none;
 
     position: absolute;
+    z-index: 1001;
     right: 0;
     top: calc(100% + 6px);
-
     min-width: 130px;
     padding: 6px;
-
     background: white;
     border: 1px solid #dee2e6;
     border-radius: 8px;
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
