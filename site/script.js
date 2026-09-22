@@ -1,11 +1,12 @@
-function copyText() {
-  const text = document.getElementById("text-to-copy").textContent;
+function copyCode() {
+  const code = document.getElementById("code-to-copy").textContent;
 
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(code);
 
-  document.querySelector(".copy-box button").textContent = "Copied!";
+  const button = document.querySelector(".copy-button");
+  button.textContent = "Copied!";
 
   setTimeout(() => {
-    document.querySelector(".copy-box button").textContent = "Copy";
+    button.textContent = "Copy";
   }, 1500);
 }
