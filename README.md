@@ -56,11 +56,6 @@
   <img src="https://img.shields.io/github/contributors/Micharl13/Vector?style=flat-square" alt="Contributors">
 </a>
 
-<!-- npm (placeholder, update name later) -->
-<a href="https://www.npmjs.com/package/vector">
-  <img src="https://img.shields.io/npm/v/vector?style=flat-square" alt="npm version">
-</a>
-
 <!-- Usage -->
 <a href="https://cdn.jsdelivr.net/gh/Micharl13/Vector@vDev/dist/vector.css">
   <img src="https://img.shields.io/badge/CDN-ready-brightgreen?style=flat-square" alt="CDN ready">
@@ -68,21 +63,6 @@
 <a href="https://Micharl13.github.io/Vector/">
   <img src="https://img.shields.io/badge/Live-Demo-blue?style=flat-square" alt="Live demo">
 </a>
-
-## Using Vector
-You can get Vector in a couple of ways:
-
-### NPM
-(COMING IN THE NEAR FUTURE)
-
-### Link to the jsDelivr CDN
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Micharl13/Vector@main/dist/css/vector.css">
-```
-### Download
-
-- [Download Source (ZIP)](https://github.com/Micharl13/vector/archive/refs/heads/main.zip)
-- [Download Latest Release (COMING IN THE NEAR FUTURE)](https://github.com/Micharl13/vector/releases)
 
 ## Contributing
 
